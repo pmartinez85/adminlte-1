@@ -22,5 +22,8 @@ elixir(mix => {
            './public/css/app-less.css',
            './public/css/adminlte-less.css'
        ])
+       .copy('node_modules/font-awesome/fonts/*.*','public/fonts/')
+       .copy('node_modules/ionicons/dist/fonts/*.*','public/fonts/')
+       .copy('node_modules/admin-lte/bootstrap/fonts/*.*','public/fonts/bootstrap')
        .webpack('app.js');
 });
